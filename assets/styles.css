@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
+:root {
+  --navy: #0f1c3f;
+  --navy-muted: #334155;
+  --accent: #1d4ed8;
+  --accent-hover: #1e40af;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --success: #047857;
+  --warning: #b45309;
+  --error: #b91c1c;
+  --radius: 16px;
+}
+
+html, body, [data-testid="stAppViewContainer"] {
+  background: var(--bg);
+  color: var(--navy);
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+[data-testid="stHeader"] {
+  background: transparent;
+}
+
+.block-container {
+  max-width: 920px;
+  padding-top: 1.4rem;
+  padding-bottom: 3rem;
+}
+
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+[data-testid="stToolbar"] { display: none; }
+
+.ds-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.ds-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1d4ed8, #0f1c3f);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.ds-brand-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.ds-kicker {
+  color: var(--navy-muted);
+  font-size: 0.85rem;
+}
+
+h1, h2, h3, .stMarkdown h1 {
+  color: var(--navy) !important;
+  letter-spacing: -0.02em;
+}
+
+.ds-hero {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 28px 22px;
+  box-shadow: 0 10px 30px rgba(15, 28, 63, 0.04);
+  margin-bottom: 18px;
+}
+
+.ds-hero h1 {
+  font-size: 2rem;
+  margin: 0 0 8px;
+}
+
+.ds-subtitle {
+  font-size: 1.12rem;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+.ds-support {
+  color: var(--navy-muted);
+  margin: 0;
+}
+
+.ds-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(15, 28, 63, 0.035);
+  margin-bottom: 16px;
+}
+
+.ds-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ds-meta-item {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.ds-meta-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.ds-meta-value {
+  font-weight: 600;
+  color: var(--navy);
+  word-break: break-word;
+}
+
+.ds-status {
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 8px 0 0;
+  border: 1px solid var(--border);
+}
+
+.ds-status.ok { background: #ecfdf5; border-color: #a7f3d0; color: var(--success); }
+.ds-status.warn { background: #fffbeb; border-color: #fde68a; color: var(--warning); }
+.ds-status.err { background: #fef2f2; border-color: #fecaca; color: var(--error); }
+.ds-status.info { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
+
+.ds-footer {
+  margin-top: 28px;
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+div[data-testid="stFileUploader"] section {
+  border: 1.5px dashed #93c5fd !important;
+  border-radius: 14px !important;
+  background: #f8fbff !important;
+}
+
+div[data-testid="stFileUploader"] section:hover {
+  border-color: var(--accent) !important;
+}
+
+.stButton > button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+}
+
+.stButton > button:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
+.stDownloadButton > button {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.stDownloadButton > button:hover {
+  background: #1e293b;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .ds-hero, .ds-card { padding: 18px; }
+  .ds-hero h1 { font-size: 1.55rem; }
+  .ds-meta { grid-template-columns: 1fr; }
+}
