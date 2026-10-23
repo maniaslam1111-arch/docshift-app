@@ -1,22 +1,4 @@
-import streamlit as st
 
-st.set_page_config(
-    page_title="DocShift - PDF to Word",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
-
-# Faltu header, footer aur extra space hatane ke liye CSS
-st.markdown("""
-    <style>
-        .block-container {
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
-        }
-        header {visibility: hidden;}
-        footer {visibility: hidden;}
-    </style>
-""", unsafe_allow_html=True)
 """DocShift Streamlit application."""
 
 from __future__ import annotations
